@@ -1,0 +1,23 @@
+<application>
+<name>Joint Torque Sensor Calibration GUI - macsi03 </name>
+<dependencies>
+<port>/JTSCalibration/right_arm/calibrated:o</port>
+</dependencies>
+
+<module>
+<name>jtsCalibrationGUI</name>
+<node>macsi03</node>
+<stdio>macsi03</stdio>
+<tag>jointSensorsCalibrationGUI</tag>
+</module>
+
+<!-- JTS connections -->
+<connection>
+  <from>/JTSCalibration/right_arm/calibrated:o</from>
+  <to>/jtsCalibrationGUI/ra_jts:i</to>
+  <protocol>udp</protocol>
+</connection>
+
+</application>
+
+
