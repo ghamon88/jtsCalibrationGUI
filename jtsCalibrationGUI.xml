@@ -1,4 +1,4 @@
-<application>
+*<application>
 <name>Joint Torque Sensor Calibration GUI - macsi03 </name>
 <dependencies>
 <port>/JTSCalibration/right_arm/calibrated:o</port>
@@ -13,8 +13,9 @@
 
 <!-- JTS connections -->
 <connection>
+  <!-- choose here which joint torque sensors to visualize -->
   <from>/JTSCalibration/right_arm/calibrated:o</from>
-  <to>/jtsCalibrationGUI/ra_jts:i</to>
+  <to>/jtsCalibrationGUI/jts:i</to>
   <protocol>udp</protocol>
 </connection>
 
